@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
-/*--------------------------------------------------------------
+/*------------------------------------------------
+--------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 - Typography
@@ -30,38 +31,225 @@
 /* --------------------------------------------------
 1.0 Typography 
 -------------------------------------------------- */
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+#bicycle p, .col-1-6 a, footer ul li a, footer p  {
+	color: #fff;
+}
+h2, footer ul a:hover, nav ul li a:hover  {
+	color: #f99d39;
+}
+#bicycle .col-1-2:nth-child(2) {
+	font-size: 1rem;
+}
+#bicycle .col-1-2:first-child, #bicycle .col-1-2:nth-child(2), footer p {
+	font-weight: 300;
+}
 /* --------- 1.1 Headings --------- */
-h1 {
-	margin: 0rem;
+h2, #works h3 {
+	text-transform: uppercase;
 }
 h2 {
-	text-align: center;
+	padding: 3rem 0rem 3rem 0rem;
+	font-size: 1.5rem;
+}
+h3, nav ul li a {
+	color: #4e61ac;
+}
+#works h3 {
+	padding-top: 40px;
+}
+header .col-1-5 {
+	margin: 1rem 0rem 0rem 0rem;
 }
 /* --------- 1.2 Body Copy --------- */
+#bicycle p, h2, #works h3, #works p, .col-3-5 {
+	text-align: center;
+}
+#bicycle .col-1-2:first-child {
+	font-size: 4.4rem;
+	padding-top: 5rem;
+	padding-bottom: 1.5rem;
+	margin-top: 0rem;
+	padding-right: 0;
+}
+#bicycle .col-1-2:nth-child(2){
+	line-height: 1.5rem;
+	margin-bottom: 3rem;
+}
+.hoverParent {
+	position: relative;
+	float: left;
+}
+.hoverParent:hover .hoverContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  background-color: #bcbec0;
+}
+.hoverParent:hover .hoverContent {
+	display: block;
+}
+.hoverContent {
+	display: none;
+}
+h3 + p {
+	font-size: .8rem;
+}
 /* --------- 1.3 Buttons --------- */
+.col-1-6:first-child {
+	margin-left: 21rem;
+}
+.col-1-6:last-child {
+	margin-right: 21rem;
+}
+.col-1-6 a {
+	text-decoration: none;
+	background-color: #f99d39;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+.col-1-6:first-child a {
+	padding: 10px 47px;
+}
+.col-1-6:last-child a {
+	padding: 10px 40px;
+}
+.col-1-6 a:hover, footer {
+	background-color: #4e61ac;
+}
+#about ul li:first-child a{
+	background: url(../img/sprite-fb.png) no-repeat;
+}
+#about ul li:last-child a {
+	background: url(../img/sprite-twitter.png) no-repeat;
+}
+#about ul li:first-child a, #about ul li:last-child a {
+	width: 25px;
+	height: 25px;
+}
+#about ul li:first-child a:hover, #about ul li:last-child a:hover {
+	background-position: 0 -25px;
+}
+#about ul li:first-child a, #about ul li:last-child a, ul li {
+	display: inline-block;
+}
+
+
 /* --------- 1.4 Forms --------- */
 /* --------- 1.6 Tables --------- */
 /* --------- 1.5 Lists --------- */
-ul li {
-	display: inline-block;
+
+/* ------------------------------------
+2.0 Navigation 
+---------------------------------------- */
+nav ul li a{
+	padding-left: 2rem;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+nav ul {
+	margin-top: 2rem;
 }
 ul {
 	padding: 0rem;
 }
 /* ------------------------------------
-2.0 Navigation 
----------------------------------------- */
-/* ------------------------------------
 3.0 Content
 ---------------------------------------- */
 /* --------- 3.1 Site Structure ---------*/
-.col-7-10 {
-	margin: 0 auto;
+#works div, #about .row {
+	margin-bottom: 2rem;
+}
+header .col-1-5, .wrapper, .col-1-2, .col-3-5 {
+	margin: 0 auto;	
 }
 /* --------- 3.3 Site Footer --------- */
+footer ul li a {
+	text-decoration: none;
+}
+footer .col-1-5 {
+	margin-top: 2.5rem;
+	margin-right: -5.5rem;
+}
+footer p {
+	margin-top: 3.5rem;
+	font-size: .8rem;
+}
+footer ul li {
+	padding: 20px;
+}
+footer ul {
+	margin-top: 2.4rem;
+}
+
 /* ------------------------------------
 4.0 Media
 ---------------------------------------- */
+#bicycle {
+	background: url(../img/hero.jpg) no-repeat;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#work-1 {
+	background: url(../img/work-1.png) no-repeat;
+}
+#work-2 {
+	background: url(../img/work-2.png) no-repeat -40px;
+}
+#work-3 {
+	background: url(../img/work-3.png) no-repeat;
+}
+#work-4 {
+	background: url(../img/work-4.png) no-repeat;
+}
+#work-1, #work-2, #work-3, #work-4, #team-1, #team-2, #team-3, #team-4 {
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+}
+#team-1 {
+	background: url(../img/team-1.jpg) no-repeat -40px;
+}
+#team-2 {
+	background: url(../img/team-2.jpg) no-repeat -15px -60px;
+}
+#team-3 {
+	background: url(../img/team-3.jpg) no-repeat -50px;
+}
+#team-4 {
+	background: url(../img/team-4.jpg) no-repeat -50px -30px;
+}
+#team-1, #team-2, #team-3, #team-4 {
+	margin-right: 2rem;
+}
+#team-2, #team-4 {
+	margin-left: 4.5rem;
+}
+#team-1, #team-3 {
+	margin-bottom: 4.5rem;
+}
+#team-1 + .col-2-9, #team-2 + .col-2-9, #team-3 + .col-2-9, #team-4 + .col-2-9 {
+	padding-top: 2rem;
+}
 /* ------------------------------------
 5.0 Utility
 ---------------------------------------- */
@@ -73,8 +261,6 @@ ul {
 	box-sizing: border-box;
 }
 .wrapper {
-	background-color: grey;
-	margin: 0 auto;
 	width: 70%; 
 }
 .row:after {
@@ -96,21 +282,8 @@ ul {
 .f-none {
 	float: none;
 }
-.col-1-3 {
-	float: none;
-	margin: 0 auto;
-}
-.col-1-1 {
-	width: 100%;
-}
 .col-1-2 {
 	width: 50%;
-}
-.red {
-	background-color: red;
-}
-.col-1-3 {
-	width: 33.33%;
 }
 .col-1-4 {
 	width: 25%;
@@ -120,100 +293,203 @@ ul {
 }
 .col-1-6 {
 	width: 16.66%;
-}
-.col-1-7 {
-	width: 14.2%;
+	margin-bottom: 4rem;
+	margin-left: -10px;
 }
 .col-1-8 {
 	width: 12.5%
 }
-.col-1-9 {
-	width: 11.11%;
-}
-.col-1-10 {
-	width: 10%;
-}
-.col-1-11 {
-	width: 9.091%
-}
-.col-1-12 {
-	width: 8.33%;
-}
-.col-2-3 {
-	width: 66.66%
-}
-.col-3-4 {
-	width: 75%
-}
 .col-3-5 {
-	width: 60%
-}
-.col-2-5 {
-	width: 40%
-}
-.col-5-6 {
-	width: 83.33%;
-}
-.col-3-7 {
-	width: 43%;
-}
-.col-4-7 {
-	width: 57%;
-}
-.col-5-8 {
-	width: 62.5%;
-}
-.col-3-8 {
-	width: 37.5%;
+	width: 60%;
+	margin-bottom: 5.5rem;
+	line-height: 1.2rem;
 }
 .col-2-9 {
 	width: 22.2%;
+	padding: 0px;
 }
-.col-7-9 {
-	width: 77.8%;
-}
-.col-3-10 {
-	width: 30%;
-}
-.col-7-10 {
-	width: 70%;
-}
-.col-5-11 {
-	width: 45%;
-}
-.col-6-11 {
-	width: 55%;
-}
-.col-11-12 {
-	width: 91.67%;
-}
+
+
+
+
+
+
+
+
 
 
 
 
 
 @media (max-width: 480px) {
+/*------------------------------------------------
+--------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+  1.1 - Headings
+  1.2 - Body Copy
+  1.3 - Buttons
+  1.4 - Forms
+  1.5 - Lists
+  1.6 - Tables
+2.0 - Navigation Menus
+  2.1 - Main
+  2.2 - Sub
+  2.3 - Footer
+3.0 - Content
+  3.1 - Site Structure
+  3.2	- Site Header
+  3.3	- Site Footer
+4.0 - Media
+5.0 - Utility =========== just for classes
+  5.1 - Text Sizes
+  5.2 - Colors
+  5.3 - Alignments
+--------------------------------------------------------------*/
+/* --------------------------------------------------
+1.0 Typography 
+-------------------------------------------------- */
+/* --------- 1.1 Headings --------- */
+	body > header .col-1-5{
+		float: none;
+		padding-left: 120px;
+	}
+	#bicycle .col-1-2:first-child {
+		font-size: 3.2rem;
+		padding-top: 2rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+/* --------- 1.2 Body Copy --------- */
+	#bicycle .col-1-2:nth-child(2), .col-3-5, .col-2-9 p, .hoverContent p {
+		font-size: 1.2rem;
+	}
+	.col-3-5 {
+		margin-bottom: 3rem;
+		line-height: 1.5rem;
+	}
+	p, h3 {
+		text-align: center;
+	}
+	#about ul {
+		padding-left: 140px;
+	}
+	.col-1-4 h3, .col-1-4 p {
+		color: #fff;
+	}
+	.col-1-4 p {
+		font-weight: 300;
+	}
+/* --------- 1.3 Buttons --------- */
+	#about ul li:first-child a {
+		background: url(../img/sprite-mobile-fb.png) no-repeat;
+	}
+	#about ul li:last-child a {
+		background: url(../img/sprite-mobile-tw.png) no-repeat;
+	}
+	#about ul li a:first-child {
+		width: 50px;
+		height: 50px;
+	}
+	#about ul li:first-child a:hover, #about ul li:last-child a:hover {
+	background-position: 0 -50px;
+	}
+	#about ul li:first-child a, #about ul li:last-child a {
+	display: inline-block;
+	}
+/* --------- 1.4 Forms --------- */
+/* --------- 1.6 Tables --------- */
+/* --------- 1.5 Lists --------- */
+	footer ul {
+		padding-left: 30px;
+		font-size: 1.5rem;
+	}
+/* ------------------------------------
+2.0 Navigation 
+---------------------------------------- */
+	.col-1-4 {
+		float: none;
+		display: inline;
+	}
+	nav ul {
+		padding-left: 50px;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+/* ------------------------------------
+3.0 Content
+---------------------------------------- */
+/* --------- 3.1 Site Structure ---------*/
 	.wrapper {
-		width: 85%;
+		width: 80%;
 	}
-	.col-1-4:nth-child(2), .col-1-5:nth-child(3), .col-1-6:nth-child(2), .col-1-6:nth-child(4), .col-1-7:nth-child(4), .col-1-8:nth-child(2), .col-1-8:nth-child(4), .col-1-8:nth-child(6), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11:nth-child(4), .col-1-11:nth-child(8), .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9), .col-1-7, .col-1-5, .col-1-11{
-		padding-right: 0;
-	}
-	.col-1-7, .col-1-8{
-		width: 25%;
-	}
-	 .col-1-9, .col-1-12 {
-		width: 33.3%;
-	}
-	.col-11-12 {
-		width: 66%;
-	}
-	.col-1-4, .col-1-6, .col-1-8, .col-1-10, .col-3-4, .col-5-6 {
-		width: 50%
-	}
-	.col-1-7, .col-1-5, .col-1-11 {
+	.col-1-5, .col-1-2, .col-1-4, .col-3-5, #work-1, #work-2, #work-3, #work-4, .col-2-9{
 		width: 100%;
 	}
+	.col-1-6 {
+		width: 50%;
+		margin-bottom: 0rem;
+		padding: 0px 0px 50px 0px;
+	}
+	.col-1-6:first-child {
+		margin-left: 0rem;
+	}
+	.col-1-6:last-child {
+		margin-right: 0rem;
+	}
+	.col-1-4, .col-1-8 {
+		margin: 0rem;
+		padding: 0px;
+		float: none;
+	}
+	.col-1-8 {
+		width: 35%;
+		line-height: 1.3rem;
+		font-size: 1rem;
+		margin-left: 7rem;
+	}
+	#team-1 + .col-2-9, #team-2 + .col-2-9, #team-3 + .col-2-9, #team-4 + .col-2-9 {
+		padding: 0px 0px 30px 0px;
+	}
+/* --------- 3.3 Site Footer --------- */
+/* ------------------------------------
+4.0 Media
+---------------------------------------- */
+	#work-1, #work-3, .hoverContent {
+		background-color: #4e61ac;
+	}
+	#work-2, #work-4 {
+		background-color: #f99d39;
+	}
+	#work-1, #work-2, #work-3, #work-4 {
+		border-radius: 0px;
+		background-image: none;
+		margin-bottom: 0rem;
+	} 
+	.hoverContent {
+		display: inherit;
+	}
+	.hoverParent:hover {
+		display: none;
+	}
+	#works {
+		width: 100%;
+	}
+	#works div {
+		margin-bottom: 0rem;
+	}
+	#team-1, #team-2, #team-3, #team-4 {
+		margin: 0rem 0rem 0rem 5.2rem;
+	}
+	footer .col-1-5 {
+		padding: 20px 0px 20px 130px;
+		margin: 0rem;
+	}
+/* ------------------------------------
+5.0 Utility
+---------------------------------------- */
 }
 
 
