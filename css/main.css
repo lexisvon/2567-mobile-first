@@ -34,6 +34,9 @@
 body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
+#works a, p{
+	color: #58595B;
+}
 #bicycle p, .col-1-6 a, footer ul li a, footer p  {
 	color: #fff;
 }
@@ -45,6 +48,9 @@ h2, footer ul a:hover, nav ul li a:hover  {
 }
 #bicycle .col-1-2:first-child, #bicycle .col-1-2:nth-child(2), footer p {
 	font-weight: 300;
+}
+.col-1-6 a, nav ul li a, footer ul li a {
+	text-decoration: none;
 }
 /* --------- 1.1 Headings --------- */
 h2, #works h3 {
@@ -69,15 +75,16 @@ header .col-1-5 {
 }
 #bicycle .col-1-2:first-child {
 	font-size: 4.4rem;
-	padding-top: 5rem;
-	padding-bottom: 1.5rem;
-	margin-top: 0rem;
-	padding-right: 0;
+	padding: 80px 0px 20px 0px;
 }
 #bicycle .col-1-2:nth-child(2){
 	line-height: 1.5rem;
 	margin-bottom: 3rem;
 }
+h3 + p {
+	font-size: .8rem;
+}
+/* --------- 1.3 Buttons --------- */
 .hoverParent {
 	position: relative;
 	float: left;
@@ -95,19 +102,12 @@ header .col-1-5 {
   border-radius: 100px;
   background-color: #bcbec0;
 }
-
 .hoverContent {
 	display: none;
 }
-
 .hoverParent:hover .hoverContent {
 	display: block;
 }
-
-h3 + p {
-	font-size: .8rem;
-}
-/* --------- 1.3 Buttons --------- */
 .col-1-6:first-child {
 	margin-left: 21rem;
 }
@@ -115,7 +115,6 @@ h3 + p {
 	margin-right: 21rem;
 }
 .col-1-6 a {
-	text-decoration: none;
 	background-color: #f99d39;
 	-ms-border-radius: 8px;
 	-o-border-radius: 8px;
@@ -159,7 +158,6 @@ h3 + p {
 ---------------------------------------- */
 nav ul li a{
 	padding-left: 32px;
-	text-decoration: none;
 	font-size: 1.2rem;
 }
 nav ul {
@@ -179,9 +177,6 @@ header .col-1-5, .wrapper, .col-1-2, .col-3-5 {
 	margin: 0 auto;	
 }
 /* --------- 3.3 Site Footer --------- */
-footer ul li a {
-	text-decoration: none;
-}
 footer .col-1-5 {
 	margin-top: 2.5rem;
 	margin-right: -5.5rem;
@@ -382,13 +377,16 @@ footer ul {
 	#about ul {
 		padding-left: 140px;
 	}
-	.col-1-4 h3, .col-1-4 p {
+	.col-1-4 h3, .col-1-4 p{
 		color: #fff;
 	}
 	.col-1-4 p {
 		font-weight: 300;
 	}
 /* --------- 1.3 Buttons --------- */
+	#works a {
+		text-decoration: none;
+	}
 	#about ul li:first-child a {
 		background: url(../img/sprite-mobile-fb.png) no-repeat;
 	}
