@@ -51,7 +51,7 @@ h2, #works h3 {
 	text-transform: uppercase;
 }
 h2 {
-	padding: 3rem 0rem 3rem 0rem;
+	padding: 48px 0px 48px 0px;
 	font-size: 1.5rem;
 }
 h3, nav ul li a {
@@ -95,12 +95,15 @@ header .col-1-5 {
   border-radius: 100px;
   background-color: #bcbec0;
 }
-.hoverParent:hover .hoverContent {
-	display: block;
-}
+
 .hoverContent {
 	display: none;
 }
+
+.hoverParent:hover .hoverContent {
+	display: block;
+}
+
 h3 + p {
 	font-size: .8rem;
 }
@@ -155,7 +158,7 @@ h3 + p {
 2.0 Navigation 
 ---------------------------------------- */
 nav ul li a{
-	padding-left: 2rem;
+	padding-left: 32px;
 	text-decoration: none;
 	font-size: 1.2rem;
 }
@@ -163,7 +166,7 @@ nav ul {
 	margin-top: 2rem;
 }
 ul {
-	padding: 0rem;
+	padding: 0px;
 }
 /* ------------------------------------
 3.0 Content
@@ -248,7 +251,7 @@ footer ul {
 	margin-bottom: 4.5rem;
 }
 #team-1 + .col-2-9, #team-2 + .col-2-9, #team-3 + .col-2-9, #team-4 + .col-2-9 {
-	padding-top: 2rem;
+	padding-top: 32px;
 }
 /* ------------------------------------
 5.0 Utility
@@ -306,7 +309,6 @@ footer ul {
 }
 .col-2-9 {
 	width: 22.2%;
-	padding: 0px;
 }
 
 
@@ -357,10 +359,14 @@ footer ul {
 	}
 	#bicycle .col-1-2:first-child {
 		font-size: 3.2rem;
-		padding-top: 2rem;
+		padding-top: 32px;
 	}
 	h3 {
 		font-size: 1.5rem;
+		margin-top: 0rem;
+	}
+	#about h3 {
+		margin-top: 2rem;
 	}
 /* --------- 1.2 Body Copy --------- */
 	#bicycle .col-1-2:nth-child(2), .col-3-5, .col-2-9 p, .hoverContent p {
@@ -457,28 +463,34 @@ footer ul {
 /* ------------------------------------
 4.0 Media
 ---------------------------------------- */
-	#work-1, #work-3, .hoverContent {
+	.hoverParent {
+		position: static;
+		float: none;
+	}
+	.hoverContent, .hoverParent:hover .hoverContent, #work-1, #work-3, #work-2, #work-4 {
+		display: block;
+	  	width: 100%;
+	  	height: 100%;
+	  	position: static;
+	  	-ms-border-radius: 0;
+	  	-o-border-radius: 0;
+	  	-moz-border-radius: 0;
+	  	-webkit-border-radius: 0;
+	  	border-radius: 0;
+	}
+	#work-1, #work-3, #work-1.hoverParent:hover .hoverContent, #work-3.hoverParent:hover .hoverContent {
 		background-color: #4e61ac;
 	}
-	#work-2, #work-4 {
+	#work-2, #work-4, #work-2.hoverParent:hover .hoverContent, #work-4.hoverParent:hover .hoverContent {
+		background: none;
 		background-color: #f99d39;
-	}
-	#work-1, #work-2, #work-3, #work-4 {
-		border-radius: 0px;
-		background-image: none;
-		margin-bottom: 0rem;
-	} 
-	.hoverContent {
-		display: inherit;
-	}
-	.hoverParent:hover {
-		display: none;
 	}
 	#works {
 		width: 100%;
 	}
 	#works div {
 		margin-bottom: 0rem;
+		padding-bottom: 20px;
 	}
 	#team-1, #team-2, #team-3, #team-4 {
 		margin: 0rem 0rem 0rem 5.2rem;
