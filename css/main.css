@@ -178,8 +178,7 @@ header .col-1-5, .wrapper, .col-1-2, .col-3-5 {
 }
 /* --------- 3.3 Site Footer --------- */
 footer .col-1-5 {
-	margin-top: 2.5rem;
-	margin-right: -5.5rem;
+	margin: 2.5rem -5.5rem 0rem 0rem;
 }
 footer p {
 	margin-top: 3.5rem;
@@ -349,7 +348,6 @@ footer ul {
 -------------------------------------------------- */
 /* --------- 1.1 Headings --------- */
 	body > header .col-1-5{
-		float: none;
 		padding-left: 120px;
 	}
 	#bicycle .col-1-2:first-child {
@@ -374,9 +372,7 @@ footer ul {
 	p, h3 {
 		text-align: center;
 	}
-	#about ul {
-		padding-left: 140px;
-	}
+
 	.col-1-4 h3, .col-1-4 p{
 		color: #fff;
 	}
@@ -406,6 +402,9 @@ footer ul {
 /* --------- 1.4 Forms --------- */
 /* --------- 1.6 Tables --------- */
 /* --------- 1.5 Lists --------- */
+	#about ul {
+		padding-left: 140px;
+	}
 	footer ul {
 		padding-left: 30px;
 		font-size: 1.5rem;
@@ -413,10 +412,7 @@ footer ul {
 /* ------------------------------------
 2.0 Navigation 
 ---------------------------------------- */
-	.col-1-4 {
-		float: none;
-		display: inline;
-	}
+
 	nav ul {
 		padding-left: 50px;
 		margin-top: 1.5rem;
@@ -428,6 +424,9 @@ footer ul {
 /* --------- 3.1 Site Structure ---------*/
 	.wrapper {
 		width: 80%;
+	}
+	.col-1-4, .col-1-8, .hoverParent {
+		float: none;
 	}
 	.col-1-5, .col-1-2, .col-1-4, .col-3-5, #work-1, #work-2, #work-3, #work-4, .col-2-9{
 		width: 100%;
@@ -446,7 +445,9 @@ footer ul {
 	.col-1-4, .col-1-8 {
 		margin: 0rem;
 		padding: 0px;
-		float: none;
+	}
+	.col-1-4 {
+		display: inline;
 	}
 	.col-1-8 {
 		width: 35%;
@@ -463,7 +464,6 @@ footer ul {
 ---------------------------------------- */
 	.hoverParent {
 		position: static;
-		float: none;
 	}
 	.hoverContent, .hoverParent:hover .hoverContent, #work-1, #work-3, #work-2, #work-4 {
 		display: block;
