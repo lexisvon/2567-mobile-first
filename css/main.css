@@ -37,19 +37,16 @@ body {
 #works a, p{
 	color: #58595B;
 }
-#bicycle p, .col-1-6 a, footer ul li a, footer p  {
+#bicycle p, .col-1-6 a, footer ul li a, footer p, footer a, #bicycle a {
 	color: #fff;
 }
 h2, footer ul a:hover, nav ul li a:hover  {
 	color: #f99d39;
 }
-#bicycle .col-1-2:nth-child(2) {
-	font-size: 1rem;
-}
-#bicycle .col-1-2:first-child, #bicycle .col-1-2:nth-child(2), footer p {
+#bicycle, footer p {
 	font-weight: 300;
 }
-.col-1-6 a, nav ul li a, footer ul li a {
+a {
 	text-decoration: none;
 }
 /* --------- 1.1 Headings --------- */
@@ -57,32 +54,39 @@ h2, #works h3 {
 	text-transform: uppercase;
 }
 h2 {
-	padding: 48px 0px 48px 0px;
+	padding: 48px 0px;
 	font-size: 1.5rem;
 }
-h3, nav ul li a {
+#about h3 {
+	font-size: 1.3rem;
+}
+#about h2 {
+	padding: 0px;
+}
+h3, header nav ul li a {
 	color: #4e61ac;
 }
 #works h3 {
 	padding-top: 40px;
 }
-header .col-1-5 {
-	margin: 1rem 0rem 0rem 0rem;
-}
 /* --------- 1.2 Body Copy --------- */
 #bicycle p, h2, #works h3, #works p, .col-3-5 {
 	text-align: center;
 }
-#bicycle .col-1-2:first-child {
-	font-size: 4.4rem;
+#works p {
+	font-size: .85rem;
+}
+#bicycle p:first-child{
+	font-size: 4rem;
 	padding: 80px 0px 20px 0px;
 }
-#bicycle .col-1-2:nth-child(2){
+#bicycle p:nth-child(2){
 	line-height: 1.5rem;
 	margin-bottom: 3rem;
+	padding: 0px 300px;
 }
-h3 + p {
-	font-size: .8rem;
+#bicycle a:first-child {
+	margin-right: 15px;
 }
 /* --------- 1.3 Buttons --------- */
 .hoverParent {
@@ -108,13 +112,7 @@ h3 + p {
 .hoverParent:hover .hoverContent {
 	display: block;
 }
-.col-1-6:first-child {
-	margin-left: 21rem;
-}
-.col-1-6:last-child {
-	margin-right: 21rem;
-}
-.col-1-6 a {
+#bicycle a {
 	background-color: #f99d39;
 	-ms-border-radius: 8px;
 	-o-border-radius: 8px;
@@ -122,13 +120,13 @@ h3 + p {
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 }
-.col-1-6:first-child a {
+#bicycle a:first-child {
 	padding: 10px 47px;
 }
-.col-1-6:last-child a {
+#bicycle a:last-child {
 	padding: 10px 40px;
 }
-.col-1-6 a:hover, footer {
+#bicycle a:hover, footer {
 	background-color: #4e61ac;
 }
 #about ul li:first-child a{
@@ -156,7 +154,7 @@ h3 + p {
 /* ------------------------------------
 2.0 Navigation 
 ---------------------------------------- */
-nav ul li a{
+header nav ul li a{
 	padding-left: 32px;
 	font-size: 1.2rem;
 }
@@ -173,19 +171,21 @@ ul {
 #works div, #about .row {
 	margin-bottom: 2rem;
 }
-header .col-1-5, .wrapper, .col-1-2, .col-3-5 {
+.wrapper, .col-1-2, .col-3-5, header, .col-1-5, #bicycle p, h1 {
 	margin: 0 auto;	
 }
 /* --------- 3.3 Site Footer --------- */
-footer .col-1-5 {
-	margin: 2.5rem -5.5rem 0rem 0rem;
+footer img {
+	margin-top: 2.8rem;
+	margin-right: 1rem;
 }
 footer p {
-	margin-top: 3.5rem;
+	margin-top: 3.2rem;
 	font-size: .8rem;
+	line-height: 1.2rem;
 }
 footer ul li {
-	padding: 20px;
+	padding: 20px 20px;
 }
 footer ul {
 	margin-top: 2.4rem;
@@ -201,6 +201,7 @@ footer ul {
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
+	padding-bottom: 65px;
 }
 #work-1 {
 	background: url(../img/work-1.png) no-repeat;
@@ -238,12 +239,6 @@ footer ul {
 #team-1, #team-2, #team-3, #team-4 {
 	margin-right: 2rem;
 }
-#team-2, #team-4 {
-	margin-left: 4.5rem;
-}
-#team-1, #team-3 {
-	margin-bottom: 4.5rem;
-}
 #team-1 + .col-2-9, #team-2 + .col-2-9, #team-3 + .col-2-9, #team-4 + .col-2-9 {
 	padding-top: 32px;
 }
@@ -260,6 +255,9 @@ footer ul {
 .wrapper {
 	width: 70%; 
 }
+img{
+	max-width: 100%;
+}
 .row:after {
 	clear: both;
 	content:"";
@@ -267,7 +265,6 @@ footer ul {
 }
 [class*='col-'] {
 	float: left;
-	margin-bottom: 20px;
 	padding-right: 20px;
 }
 [class*='col-']:last-of-type{
@@ -279,8 +276,14 @@ footer ul {
 .f-none {
 	float: none;
 }
+.col-1-1 {
+	width: 100%;
+}
 .col-1-2 {
 	width: 50%;
+}
+.col-1-3 {
+	width: 33.33%;
 }
 .col-1-4 {
 	width: 25%;
@@ -290,19 +293,74 @@ footer ul {
 }
 .col-1-6 {
 	width: 16.66%;
-	margin-bottom: 4rem;
-	margin-left: -10px;
+}
+.col-1-7 {
+	width: 14.2%;
 }
 .col-1-8 {
-	width: 12.5%
+	width: 12.5%;
+}
+.col-1-9 {
+	width: 11.11%;
+}
+.col-1-10 {
+	width: 10%;
+}
+.col-1-11 {
+	width: 9.091%;
+}
+.col-1-12 {
+	width: 8.33%;
+}
+.col-2-3 {
+	width: 66.66%;
+}
+.col-3-4 {
+	width: 75%;
 }
 .col-3-5 {
 	width: 60%;
-	margin-bottom: 5.5rem;
+	margin-bottom: 5rem;
 	line-height: 1.2rem;
+}
+.col-2-5 {
+	width: 40%;
+}
+.col-5-6 {
+	width: 83.33%;
+}
+.col-3-7 {
+	width: 43%;
+}
+.col-4-7 {
+	width: 57%;
+}
+.col-5-8 {
+	width: 62.5%;
+}
+.col-3-8 {
+	width: 37.5%;
 }
 .col-2-9 {
 	width: 22.2%;
+}
+.col-7-9 {
+	width: 77.8%;
+}
+.col-3-10 {
+	width: 30%;
+}
+.col-7-10 {
+	width: 70%;
+}
+.col-5-11 {
+	width: 45%;
+}
+.col-6-11 {
+	width: 55%;
+}
+.col-11-12 {
+	width: 91.67%;
 }
 
 
@@ -318,31 +376,7 @@ footer ul {
 
 
 @media (max-width: 480px) {
-/*------------------------------------------------
---------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 - Typography
-  1.1 - Headings
-  1.2 - Body Copy
-  1.3 - Buttons
-  1.4 - Forms
-  1.5 - Lists
-  1.6 - Tables
-2.0 - Navigation Menus
-  2.1 - Main
-  2.2 - Sub
-  2.3 - Footer
-3.0 - Content
-  3.1 - Site Structure
-  3.2	- Site Header
-  3.3	- Site Footer
-4.0 - Media
-5.0 - Utility =========== just for classes
-  5.1 - Text Sizes
-  5.2 - Colors
-  5.3 - Alignments
---------------------------------------------------------------*/
+
 /* --------------------------------------------------
 1.0 Typography 
 -------------------------------------------------- */
@@ -350,7 +384,7 @@ footer ul {
 	body > header .col-1-5{
 		padding-left: 120px;
 	}
-	#bicycle .col-1-2:first-child {
+	#bicycle p:first-child {
 		font-size: 3.2rem;
 		padding-top: 32px;
 	}
@@ -362,7 +396,7 @@ footer ul {
 		margin-top: 2rem;
 	}
 /* --------- 1.2 Body Copy --------- */
-	#bicycle .col-1-2:nth-child(2), .col-3-5, .col-2-9 p, .hoverContent p {
+	#bicycle .col-1-2:nth-child(2), .col-3-5, .hoverContent p, #works p, .col-3-8 p, footer p {
 		font-size: 1.2rem;
 	}
 	.col-3-5 {
@@ -372,7 +406,6 @@ footer ul {
 	p, h3 {
 		text-align: center;
 	}
-
 	.col-1-4 h3, .col-1-4 p{
 		color: #fff;
 	}
@@ -405,7 +438,7 @@ footer ul {
 	#about ul {
 		padding-left: 140px;
 	}
-	footer ul {
+	footer ul{
 		padding-left: 30px;
 		font-size: 1.5rem;
 	}
@@ -413,9 +446,9 @@ footer ul {
 2.0 Navigation 
 ---------------------------------------- */
 
-	nav ul {
+	header nav ul {
 		padding-left: 50px;
-		margin-top: 1.5rem;
+		margin-top: .8rem;
 		margin-bottom: 1.5rem;
 	}
 /* ------------------------------------
@@ -425,28 +458,28 @@ footer ul {
 	.wrapper {
 		width: 80%;
 	}
-	.col-1-4, .col-1-8, .hoverParent {
+	.col-1-4, .col-1-8, .hoverParent, .col-1-3 {
 		float: none;
 	}
-	.col-1-5, .col-1-2, .col-1-4, .col-3-5, #work-1, #work-2, #work-3, #work-4, .col-2-9{
+	.col-1-5, .col-1-2, .col-1-4, .col-3-5, #work-1, #work-2, #work-3, #work-4, .col-2-9, .col-3-8{
 		width: 100%;
 	}
-	.col-1-6 {
-		width: 50%;
-		margin-bottom: 0rem;
-		padding: 0px 0px 50px 0px;
+	.col-1-3 {
+		width: 100%;
+		margin: 0 auto;
 	}
-	.col-1-6:first-child {
-		margin-left: 0rem;
+	.col-1-3 p {
+		margin-top: 10px;
+		margin-bottom: 30px;
 	}
-	.col-1-6:last-child {
-		margin-right: 0rem;
+	#bicycle p:nth-child(2){
+		padding: 0;
 	}
 	.col-1-4, .col-1-8 {
 		margin: 0rem;
 		padding: 0px;
 	}
-	.col-1-4 {
+	.col-1-4, footer nav ul li {
 		display: inline;
 	}
 	.col-1-8 {
@@ -455,13 +488,14 @@ footer ul {
 		font-size: 1rem;
 		margin-left: 7rem;
 	}
-	#team-1 + .col-2-9, #team-2 + .col-2-9, #team-3 + .col-2-9, #team-4 + .col-2-9 {
-		padding: 0px 0px 30px 0px;
-	}
 /* --------- 3.3 Site Footer --------- */
 /* ------------------------------------
 4.0 Media
 ---------------------------------------- */
+	img {
+		width: 100%;
+		padding-left: 15px;	
+	}
 	.hoverParent {
 		position: static;
 	}
